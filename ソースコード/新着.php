@@ -17,6 +17,8 @@
 
 <button onclick="location.href='カート.php'">カート</button>
 
+<button onclick="location.href='./'">人気商品</button>
+
 <button onclick="location.href='会員情報.php'">会員情報</button>
 
 <p>新着アイテムページ</p>
