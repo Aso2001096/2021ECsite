@@ -7,37 +7,33 @@
     <link rel="stylesheet" href="./css/style/css">
 </head>
 
-<body>
+<body style="text-align: center">
 
-<button type="submit" name="home">TOP</button>
-<link >
+<button onclick="location.href='top.php'">TOP</button>
 
-<a href="検索.php">
-    <button type="submit" name="search">検索</button>
-</a>
+<button onclick="location.href='検索.php'">検索</button>
 
-<button type="submit" name="sell">セール</button>
-<link>
+<button onclick="location.href='セール.php'">セール</button>
 
-<button type="submit" name="cart">カート</button>
-<link>
+<button onclick="location.href='カート.php'">カート</button>
 
-<button type="submit" name="member">会員情報</button>
-<link>
+<button onclick="location.href='会員情報.php'">会員情報</button>
 
 <p>新着アイテムページ</p>
 
-<a href="new_women.php">
-    <input type="button" name="women" value="WOMEN">
-</a>
-
-<input type="button" name="men" value="MEN"><br>
-
-
-<a href="new_item_men.php">
-    <input type="image" name="aki" src="img/aki_men.jpeg" alt="秋物メンズパーカー">
-</a>
-<p>税込　¥ 2,980</p>
+<tr>
+    <script>
+        function click1() {
+            document.img.src = "./img/women.png";
+        }
+        function click2(){
+            document.img.src = "./img/men.png";
+        }
+    </script>
+    <tb><input type="button" id="women" onclick="click1()" value="WOMEN"></tb>
+    <tb><input type="button" id="men" onclick="click2()" value="MEN"></tb><br>
+    <img name="img" src="./img/women.png">
+</tr>
 
 
 </body>
