@@ -7,16 +7,12 @@
 <body>
 <div style="text-align: center">
     <h1>Ishin</h1>
-    <table>
-        <tr>
-            <td><button>検索</button></td>
-            <td><button>新着商品</button></td>
-            <td><button>人気商品</button></td>
-            <td><button>セール</button></td>
-            <td><button>カート</button></td>
-            <td><button>会員情報</button></td>
-        </tr>
-    </table>
+    <button onclick="location.href='top.php'">TOP</button>
+    <button onclick="location.href='検索.php'">検索</button>
+    <button onclick="location.href='セール.php'">セール</button>
+    <button onclick="location.href='カート.php'">カート</button>
+    <button onclick="location.href='./'">人気商品</button>
+    <button onclick="location.href='会員情報.php'">会員情報</button>
     <div>
         <h2>ワンピース</h2>
         <p>この商品にぴったりな素材です</p>
