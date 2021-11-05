@@ -23,11 +23,14 @@
 <button onclick="location.href='会員情報.php'">会員情報</button>
 
 <p>検索画面</p>
-<input type="text" name="kensaku">
-<button type="submit" value="検索">検索</button><br>
-
+    <form action="検索.php" method="post">
+        <input type="text" name="kensaku">
+        <button type="submit" value="検索">検索</button><br>
+    </form>
 <p>検索履歴一覧↓↓</p>
+    <?php
 
+    ?>
 </div>
 </body>
 </html>
