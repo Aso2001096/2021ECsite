@@ -14,6 +14,8 @@
     <button onclick="location.href='./'">人気商品</button>
     <button onclick="location.href='会員情報.php'">会員情報</button>
     <div>
+        <br>
+        <img style="width: 150px; height: 180px;" name="img" src="./img/women.png">
         <h2>ワンピース</h2>
         <p>この商品にぴったりな素材です</p>
         <p>(商品説明)</p>
