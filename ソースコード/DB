@@ -1,4 +1,6 @@
 DB
 
-LAA1290955-school
-Riemori4268
+$pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan;
+                dbname=LAA1290595-school;charset=utf8',
+        'LAA1290595',
+        'Riemori4268');
