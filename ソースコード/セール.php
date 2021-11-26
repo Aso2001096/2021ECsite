@@ -11,10 +11,10 @@
     <div style="display: inline-table">
         <table>
             <tr>
-                <td><button onclick="location.href='./top.php'">TOP</button></td>
+                <td><button onclick="location.href='top.php'">TOP</button></td>
                 <td><button onclick="location.href='検索.php'">検索</button></td>
                 <td><button onclick="location.href='新着.php'">新着商品</button></td>
-                <td><button onclick="location.href='./'">人気商品</button></td>
+                <td><button onclick="location.href='人気.php'">人気商品</button></td>
                 <td><button onclick="location.href='カート.php'">カート</button></td>
                 <td><button onclick="location.href='会員情報.php'">会員情報</button></td>
             </tr>
