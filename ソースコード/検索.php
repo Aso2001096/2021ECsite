@@ -10,11 +10,11 @@
 <body>
 <div style="text-align: center">
 <h1>Ishin</h1>
-<button onclick="location.href='./top.php'">TOP</button>
+<button onclick="location.href='top.php'">TOP</button>
 
 <button onclick="location.href='新着.php'">新着商品</button>
 
-<button onclick="location.href='./top.php'">人気商品</button>
+<button onclick="location.href='人気.php'">人気商品</button>
 
 <button onclick="location.href='セール.php'">セール</button>
 
