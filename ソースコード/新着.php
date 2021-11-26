@@ -14,7 +14,7 @@
 
 <button onclick="location.href='検索.php'">検索</button>
 
-<button onclick="location.href='./'">人気商品</button>
+<button onclick="location.href='人気.php'">人気商品</button>
 
 <button onclick="location.href='セール.php'">セール</button>
 
