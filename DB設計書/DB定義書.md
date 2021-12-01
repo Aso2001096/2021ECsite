@@ -6,55 +6,46 @@
 
 # データベース設計図
 
-## 購入テーブル(d_purchase)
+## サインインテーブル(sign_in)
 
 |和名|属性名(カラム名)|型|PK|NN|FK|
 |---|-----|--|--|--|--|
-|オーダーID|order_id|bigint(20)|○|○||
-|顧客コード|customer_code|varchar(50)||○|○|
-|購入日|purchase_date|date||○||
-|総額|total_price|int(11)||○||
+|メールアドレス|e_mail|varchar(50)||○||
+|パスワード|pass|varchar(30)||○|○|
+|名前|name|varchar(20)||○||
 
-## 購入詳細テーブル(d_purchase_detail)
-
-|和名|属性名(カラム名)|型|PK|NN|FK|
-|---|-----|--|--|--|--|
-|オーダー詳細ID|detail_id|bigint(20)|○|○||
-|オーダーID|order_id|bigint(20) |○|○|○|
-|商品コード|item_code|int(11)||○||
-|価格|price|int(11)||○||
-|数量|num|int(11)||○||
-
-## 顧客マスタ(m_customers)
+## 商品詳細テーブル(commodity)
 
 |和名|属性名(カラム名)|型|PK|NN|FK|
 |---|-----|--|--|--|--|
-|顧客コード|customer_code|varchar(50)|○|○||
-|パスワード|pass|varchar(50)||○||
+|商品名|commodity_name|varchar(20)|○|○||
+|商品テキスト|ex_text|varchar(50) |○|○|○|
+|商品コード|ID|int(10)||○||
+|価格|money|int(10)||○||
+|サイズ|size|varchar(2)||○||
+
+## 顧客情報(member)
+
+|和名|属性名(カラム名)|型|PK|NN|FK|
+|---|-----|--|--|--|--|
+|顧客コード|user_ID|int(10)|○|○||
+|パスワード|pass|varchar(20)||○||
 |氏名|name|varchar(20)||○||
 |住所|address|varchar(100)||○||
-|電話番号|tel|varchar(20)||○||
-|メールアドレス|mail|varchar(100)||○||
-|削除フラグ|del_flag|int(1)||||
-|登録日|reg_date|date||○||
+|電話番号|tel|int(11)||○||
+|メールアドレス|mail|varchar(50)||○||
 
-## カテゴリマスタ(m_category)
+## お気に入り一覧(favorites)
 
 |和名|属性名(カラム名)|型|PK|NN|FK|
 |---|-----|--|--|--|--|
-|カテゴリID|category_id|int(11)|○|○||
-|氏名|name|varchar(20)||○||
-|登録日|reg_date|date||○||
+|顧客コード|user_id|int(10)|○|○||
+|商品コード|id|int(10)||○||
 
-## 商品マスタ(m_items)
+## 検索履歴(search_words)
 
 |和名|属性名(カラム名)|型|PK|NN|FK|
 |---|-----|--|--|--|--|
-|商品コード|item_code|int(11)|○|○||
-|商品名|item_name|varchar(50)||○||
-|価格|price|int(11)||○||
-|カテゴリID|category_id|int(11)||○|○|
-|画像ファイル名|image|varchar(200)||○||
-|商品詳細証明|detail|varchar(500)||||
-|削除フラグ|del_flag|int(11)||||
-|登録日|reg_date|date||○||
+|顧客コード|user_id|int(10)|○|○||
+|検索ワード|words|varchar(30)||○||
+|時間|timestamp|||○||
