@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,13 +14,28 @@
     <h3>Wellcome</h3>
 
     <?php
+    $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan;
+                dbname=LAA1290595-school;charset=utf8',
+        'LAA1290595',
+        'Riemori4268');
 
-     echo '<p>さん</p>';
-     echo '<p>ログインしました</p>';
+    $sql = $pdo->prepare('select * from sign_in where e_mail=? and pass=?');
+    $sql->execute([$_POST['mail'],$_POST['password']]);
+    foreach ($sql as $row) {
+        $_SESSION['sign_in'] = [
+                'e_mail'=>$row['e_mail'],
+                'pass'=>$row['pass'],
+                'name' => $row['name']];
+    }
+    if (isset($_SESSION['sign_in'])) {
+        echo $_SESSION['sign_in']['name'], 'さん<br>';
+        echo '<p>ログインしました</p>';
+    } else {
+        echo '<p>error</p>';
+    }
+    $pdo = null;
     ?>
-
     <button onclick="location.href='top.php'">page top</button>
-
 </div>
 </body>
 </html>
