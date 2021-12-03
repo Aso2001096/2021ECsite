@@ -4,3 +4,11 @@ $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan;
                 dbname=LAA1290595-school;charset=utf8',
         'LAA1290595',
         'Riemori4268');
+
+商品詳細テーブル(commodity) DBデータ
+|commodity_name|ex_text,ID|money|size|
+|-|-|-|-|-|
+|ワンピース|1|1580|m|
+|Gパン|2|2980|m|
+|ジャケット|3|3300|m|
+|ロングパーカー|4|3450|m|
