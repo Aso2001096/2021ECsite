@@ -9,7 +9,7 @@
 <div style="text-align: center">
     <h1>Ishin</h1>
     <p>ログアウトしました</p>
-    <button onclick="location.href='top.php'">Topに戻る</button><br>
+    <button onclick="location.href='top.php'">page top</button>
 </div>
 </body>
 </html>
