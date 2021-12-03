@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +11,12 @@
     <h1>Ishin</h1>
 
     <?php
-
-    echo '<p>さん</p>';
-    echo '<p>ログアウトしますか？</p>';
+    if(isset($_SESSION['sign_in'])){
+        echo $_SESSION['sign_in']['name'], 'さん<br>';
+        echo '<p>ログアウトしますか？</p>';
+    }else {
+        echo 'すでにログアウトしています。';
+    }
     ?>
 
     <button onclick="location.href='ログアウト完了.php'">Log out</button><br>
